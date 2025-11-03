@@ -762,15 +762,6 @@ graph LR
 - localStorage 저장 구현
 - 오류 처리
 
-**핵심 아키텍처:**
-```mermaid
-graph LR
-    UI[Chat UI] -->|POST| API[/api/chat]
-    API --> OAI[(OpenAI)]
-    UI <--> LS[(localStorage)]
-```
-
----
 
 ### 📅 4-6차시: 프로젝트 2 - AI 추리 게임
 
