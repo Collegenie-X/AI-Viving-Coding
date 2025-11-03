@@ -34,9 +34,9 @@ graph LR
     A[프로젝트 1<br/>AI 감정 친구<br/>1-3차시] --> B[프로젝트 2<br/>AI 추리 게임<br/>4-6차시]
     B --> C[프로젝트 3<br/>AI 스토리 월드<br/>7-8차시]
 
-    style A fill:#e3f2fd
-    style B fill:#fff3e0
-    style C fill:#f3e5f5
+    style A fill:#2980b9
+    style B fill:#16a085
+    style C fill:#8e44ad
 ```
 
 - **80/20 원칙**: 제공 템플릿(80%)을 그대로 사용하고, 캐릭터/테마/색상/난이도 등 20%만 개인화
@@ -584,9 +584,9 @@ graph TB
 ```mermaid
 graph TB
   P1[1-3 AI 감정 친구]:::b1 --> P2[4-6 AI 추리 게임]:::b2 --> P3[7-8 AI 스토리 월드]:::b3
-  classDef b1 fill:#e3f2fd;
-  classDef b2 fill:#fff3e0;
-  classDef b3 fill:#f3e5f5;
+  classDef b1 fill:#27ae60;
+  classDef b2 fill:#95a5a6;
+  classDef b3 fill:#8e44ad;
 ```
 
 

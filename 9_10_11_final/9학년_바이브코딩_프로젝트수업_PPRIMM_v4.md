@@ -20,6 +20,175 @@
 
 ---
 
+## 📊 전체 커리큘럼 통합 플로우차트
+
+### 🎯 8차시 전체 구조도
+
+```mermaid
+graph TB
+    Start[9학년 <br> 바이브코딩 시작] --> Week1[1차시: <br>오리엔테이션]
+    
+    Week1 --> W1A[바이브코딩 <br> 이해]
+    Week1 --> W1B[v0 + ChatGPT <br> 체험]
+    Week1 --> W1C[자기소개 <br> 카드 제작]
+    
+    W1C --> Project1Start[프로젝트 1 시작]
+    
+    subgraph "프로젝트 1: 포트폴리오 (2-4차시)"
+        Project1Start --> Week2[2차시: 기획]
+        Week2 --> W2A[플로우차트 <br> 작성]
+        Week2 --> W2B[데이터 시트<br>  작성]
+        
+        W2B --> Week3[3차시: 제작 Part 1]
+        Week3 --> W3A[Hero <br> 섹션]
+        Week3 --> W3B[About <br> 섹션]
+        
+        W3B --> Week4[4차시: 제작 Part 2]
+        Week4 --> W4A[Skills <br> 섹션]
+        Week4 --> W4B[Projects <br> 섹션]
+        Week4 --> W4C[Contact <br> 섹션]
+        Week4 --> W4D[통합 & 배포]
+    end
+    
+    W4D --> Check1{프로젝트 1<br/>완성?}
+    Check1 -->|No| W3A
+    Check1 -->|Yes| Project2Start[프로젝트 2 <br> 시작]
+    
+    subgraph "프로젝트 2: 설문 서비스 (5-7차시)"
+        Project2Start --> Week5[5차시: 로직 설계]
+        Week5 --> W5A[플로우차트 <br> 작성]
+        Week5 --> W5B[질문 데이터 <br> 작성]
+        Week5 --> W5C[유형 정의]
+        
+        W5C --> Week6[6차시:<br> 구현 Part 1]
+        Week6 --> W6A[시작 화면]
+        Week6 --> W6B[질문 화면]
+        Week6 --> W6C[결과 계산 <br> 로직]
+        
+        W6C --> Week7[7차시: <br>구현 Part 2]
+        Week7 --> W7A[결과 <br> 화면]
+        Week7 --> W7B[그래프 <br> 컴포넌트]
+        Week7 --> W7C[통합 <br> 테스트]
+        Week7 --> W7D[배포]
+    end
+    
+    W7D --> Check2{프로젝트 2<br/>완성?}
+    Check2 -->|No| W6A
+    Check2 -->|Yes| Week8[8차시:<br> 갤러리 워크]
+    
+    Week8 --> W8A[작품 전시]
+    Week8 --> W8B[상호 피드백]
+    Week8 --> W8C[성찰 & 회고]
+    
+    W8C --> End[9학년 과정 완료]
+    
+    style Start fill:#8B5CF6,color:#fff
+    style Project1Start fill:#3B82F6,color:#fff
+    style Project2Start fill:#3B82F6,color:#fff
+    style Week8 fill:#10B981,color:#fff
+    style End fill:#10B981,color:#fff
+    style Check1 fill:#F59E0B,color:#000
+    style Check2 fill:#F59E0B,color:#000
+```
+
+### 🔄 프로젝트별 개발 사이클 비교
+
+```mermaid
+graph LR
+    subgraph "프로젝트 1 - 정적 웹사이트"
+        P1A[기획<br/>2차시] --> P1B[UI 제작<br/>3-4차시]
+        P1B --> P1C[통합<br/>4차시]
+        P1C --> P1D[배포]
+    end
+    
+    subgraph "프로젝트 2 - 동적 애플리케이션"
+        P2A[설계<br/>5차시] --> P2B[로직 구현<br/>6차시]
+        P2B --> P2C[UI 구현<br/>7차시]
+        P2C --> P2D[테스트<br/>7차시]
+        P2D --> P2E[배포]
+    end
+    
+    P1D -.학습 전이.-> P2A
+    
+    style P1A fill:#3B82F6,color:#fff
+    style P1B fill:#3B82F6,color:#fff
+    style P1C fill:#10B981,color:#fff
+    style P2A fill:#8B5CF6,color:#fff
+    style P2B fill:#8B5CF6,color:#fff
+    style P2C fill:#8B5CF6,color:#fff
+    style P2D fill:#10B981,color:#fff
+```
+
+### 🛠️ 도구 및 기술 스택 맵
+
+```mermaid
+mindmap
+    root((9학년<br/>바이브코딩))
+        AI 도구
+            ChatGPT
+                프롬프트 작성
+                데이터 생성
+                문제 해결
+            v0.dev
+                코드 생성
+                UI 구현
+                배포
+        개발 기술
+            Next.js 14
+                React 컴포넌트
+                TypeScript
+            Tailwind CSS
+                반응형 디자인
+                스타일링
+            Framer Motion
+                애니메이션
+        개념 학습
+            플로우차트
+                Mermaid
+                시스템 설계
+            데이터 구조
+                Array
+                Object
+            상태 관리
+                useState
+                조건부 렌더링
+        프로젝트 관리
+            PPRIMM
+                6단계 프로세스
+            80-20 원칙
+                템플릿 활용
+                커스터마이징
+            체크포인트
+                진도 관리
+```
+
+### 📈 학습 성장 곡선
+
+```mermaid
+graph LR
+    A[1차시<br/>입문<br/>레벨 1] --> B[2-3차시<br/>기초<br/>레벨 2]
+    B --> C[4차시<br/>응용<br/>레벨 3]
+    C --> D[5-6차시<br/>심화<br/>레벨 4]
+    D --> E[7차시<br/>고급<br/>레벨 5]
+    E --> F[8차시<br/>전문가<br/>레벨 6]
+    
+    A -.도구 체험.-> A
+    B -.정적 콘텐츠.-> B
+    C -.통합 구현.-> C
+    D -.동적 로직.-> D
+    E -.알고리즘.-> E
+    F -.포트폴리오.-> F
+    
+    style A fill:#E5E7EB,color:#000
+    style B fill:#BFDBFE,color:#000
+    style C fill:#93C5FD,color:#000
+    style D fill:#60A5FA,color:#fff
+    style E fill:#3B82F6,color:#fff
+    style F fill:#1E40AF,color:#fff
+```
+
+---
+
 ## 🎯 PPRIMM 교수법 이해
 
 ### PPRIMM 6단계
@@ -66,6 +235,279 @@ graph LR
 ```
 
 **참고 결과물**: [교사가 미리 만든 샘플 포트폴리오 링크]
+
+---
+
+### 📐 프로젝트 1 - 시스템 구조도
+
+#### 1️⃣ 전체 시스템 아키텍처
+
+```mermaid
+graph TB
+    subgraph "프론트엔드 레이어"
+        A[포트폴리오 웹사이트]
+        A --> B[Hero 섹션 컴포넌트]
+        A --> C[About 섹션 컴포넌트]
+        A --> D[Skills 섹션 컴포넌트]
+        A --> E[Projects 섹션 컴포넌트]
+        A --> F[Contact 섹션 컴포넌트]
+        A --> G[네비게이션 컴포넌트]
+    end
+    
+    subgraph "스타일링 레이어"
+        H[Tailwind CSS]
+        I[반응형 디자인]
+        J[애니메이션 Framer Motion]
+    end
+    
+    subgraph "데이터 레이어"
+        K[개인 정보 데이터]
+        L[스킬 데이터 배열]
+        M[프로젝트 데이터 배열]
+        N[연락처 데이터]
+    end
+    
+    B --> H
+    C --> H
+    D --> H
+    E --> H
+    F --> H
+    
+    B --> J
+    C --> J
+    D --> J
+    E --> J
+    F --> J
+    
+    B --> K
+    C --> K
+    D --> L
+    E --> M
+    F --> N
+    
+    style A fill:#3B82F6,color:#fff
+    style H fill:#06B6D4,color:#fff
+    style K fill:#10B981,color:#fff
+```
+
+#### 2️⃣ 개발 프로세스 플로우차트
+
+```mermaid
+graph TD
+    Start[프로젝트 시작] --> Phase1[2차시: 기획 단계]
+    
+    Phase1 --> P1A[사용자 플로우 설계]
+    Phase1 --> P1B[데이터 시트 작성]
+    Phase1 --> P1C[UI 스케치]
+    
+    P1A --> Check1{기획 완료?}
+    P1B --> Check1
+    P1C --> Check1
+    
+    Check1 -->|Yes| Phase2[3차시: 제작 Part 1]
+    Check1 -->|No| P1A
+    
+    Phase2 --> P2A[Hero 섹션 구현<br/>v0 + 프롬프트]
+    P2A --> P2B[About 섹션 구현<br/>v0 + 프롬프트]
+    
+    P2B --> Check2{40% 완성?}
+    Check2 -->|Yes| Phase3[4차시: 제작 Part 2]
+    Check2 -->|No| Fix1[보완 작업]
+    Fix1 --> P2A
+    
+    Phase3 --> P3A[Skills 섹션 구현]
+    P3A --> P3B[Projects 섹션 구현]
+    P3B --> P3C[Contact 섹션 구현]
+    P3C --> P3D[통합 테스트]
+    
+    P3D --> Check3{100% 완성?}
+    Check3 -->|Yes| Deploy[배포 v0/Vercel]
+    Check3 -->|No| Fix2[디버깅 & 수정]
+    Fix2 --> P3D
+    
+    Deploy --> End[프로젝트 1 완료]
+    
+    style Start fill:#8B5CF6,color:#fff
+    style Phase1 fill:#3B82F6,color:#fff
+    style Phase2 fill:#3B82F6,color:#fff
+    style Phase3 fill:#3B82F6,color:#fff
+    style End fill:#10B981,color:#fff
+    style Check1 fill:#F59E0B,color:#000
+    style Check2 fill:#F59E0B,color:#000
+    style Check3 fill:#F59E0B,color:#000
+```
+
+#### 3️⃣ 사용자 인터랙션 플로우 (상세)
+
+```mermaid
+graph TD
+    A[사용자 웹사이트 접속] --> B[Hero 섹션 표시<br/>애니메이션 시작]
+    
+    B --> C{사용자 액션}
+    
+    C -->|스크롤 다운| D[About 섹션 진입<br/>Intersection Observer]
+    C -->|네비게이션 클릭| D
+    
+    D --> E[About 섹션 애니메이션<br/>좌우 슬라이드인]
+    
+    E --> F{사용자 액션}
+    F -->|스크롤| G[Skills 섹션]
+    F -->|네비게이션| G
+    
+    G --> H[Skills 카드 표시<br/>순차 페이드인]
+    
+    H --> I{카드 호버}
+    I -->|Yes| J[카드 상승 효과<br/>그림자 증가]
+    I -->|No| K{스크롤 계속}
+    
+    J --> K
+    K -->|Yes| L[Projects 섹션]
+    K -->|No| H
+    
+    L --> M[프로젝트 카드 표시]
+    
+    M --> N{카드 클릭}
+    N -->|GitHub 버튼| O[새 탭: GitHub 저장소]
+    N -->|Demo 버튼| P[새 탭: 프로젝트 Demo]
+    N -->|스크롤| Q[Contact 섹션]
+    
+    Q --> R[연락처 정보 표시]
+    
+    R --> S{액션 선택}
+    S -->|이메일 클릭| T[메일 앱 실행<br/>mailto 링크]
+    S -->|SNS 클릭| U[새 탭: SNS 페이지]
+    S -->|상단 스크롤| V[Smooth Scroll to Top]
+    
+    V --> B
+    
+    style A fill:#8B5CF6,color:#fff
+    style B fill:#3B82F6,color:#fff
+    style C fill:#F59E0B,color:#000
+    style F fill:#F59E0B,color:#000
+    style N fill:#F59E0B,color:#000
+    style S fill:#F59E0B,color:#000
+```
+
+#### 4️⃣ 컴포넌트 구조도
+
+```mermaid
+graph TD
+    subgraph "Portfolio App"
+        Root[App.tsx<br/>메인 컨테이너]
+        
+        Root --> Nav[Navigation<br/>네비게이션 바]
+        Root --> Main[Main Content<br/>메인 콘텐츠 영역]
+        
+        Main --> Hero[HeroSection<br/>히어로 섹션]
+        Main --> About[AboutSection<br/>자기소개 섹션]
+        Main --> Skills[SkillsSection<br/>스킬 섹션]
+        Main --> Projects[ProjectsSection<br/>프로젝트 섹션]
+        Main --> Contact[ContactSection<br/>연락처 섹션]
+        
+        Hero --> H1[ProfileImage<br/>프로필 이미지]
+        Hero --> H2[IntroText<br/>소개 텍스트]
+        Hero --> H3[CTAButton<br/>액션 버튼]
+        Hero --> H4[SocialLinks<br/>SNS 링크]
+        
+        About --> A1[AboutText<br/>자기소개 글]
+        About --> A2[AboutImage<br/>이미지]
+        
+        Skills --> S1[SkillCard<br/>스킬 카드 x3-5]
+        S1 --> S2[Icon + Title + Desc<br/>아이콘, 제목, 설명]
+        
+        Projects --> P1[ProjectCard<br/>프로젝트 카드 x2-3]
+        P1 --> P2[Image + Info<br/>이미지, 정보]
+        P1 --> P3[TechTags<br/>기술 태그]
+        P1 --> P4[ActionButtons<br/>버튼들]
+        
+        Contact --> C1[ContactCard<br/>연락처 카드]
+        Contact --> C2[Footer<br/>푸터]
+        C1 --> C3[Email + SNS<br/>이메일, SNS]
+    end
+    
+    style Root fill:#8B5CF6,color:#fff
+    style Nav fill:#3B82F6,color:#fff
+    style Main fill:#3B82F6,color:#fff
+    style Hero fill:#10B981,color:#fff
+    style About fill:#10B981,color:#fff
+    style Skills fill:#10B981,color:#fff
+    style Projects fill:#10B981,color:#fff
+    style Contact fill:#10B981,color:#fff
+```
+
+#### 5️⃣ 데이터 흐름도
+
+```mermaid
+graph LR
+    subgraph "데이터 입력"
+        A[학생 데이터 시트<br/>2차시 작성]
+    end
+    
+    subgraph "데이터 구조화"
+        B[Hero 데이터<br/>name, role, intro]
+        C[About 데이터<br/>description, image]
+        D[Skills 데이터<br/>Array of skills]
+        E[Projects 데이터<br/>Array of projects]
+        F[Contact 데이터<br/>email, sns]
+    end
+    
+    subgraph "프롬프트 생성"
+        G[ChatGPT 프롬프트<br/>데이터 포함]
+    end
+    
+    subgraph "v0 코드 생성"
+        H[v0.dev<br/>Next.js + Tailwind]
+    end
+    
+    subgraph "렌더링"
+        I[브라우저<br/>최종 화면]
+    end
+    
+    A --> B
+    A --> C
+    A --> D
+    A --> E
+    A --> F
+    
+    B --> G
+    C --> G
+    D --> G
+    E --> G
+    F --> G
+    
+    G --> H
+    H --> I
+    
+    style A fill:#F59E0B,color:#000
+    style G fill:#3B82F6,color:#fff
+    style H fill:#8B5CF6,color:#fff
+    style I fill:#10B981,color:#fff
+```
+
+#### 6️⃣ 차시별 산출물 맵
+
+```mermaid
+gantt
+    title 프로젝트 1 - 차시별 개발 타임라인
+    dateFormat X
+    axisFormat %s
+    
+    section 2차시-기획
+    플로우차트 작성        :done, p1, 0, 8
+    데이터 시트 작성       :done, p2, 8, 20
+    UI 스케치             :done, p3, 20, 25
+    
+    section 3차시-제작1
+    Hero 섹션 구현         :active, p4, 25, 40
+    About 섹션 구현        :active, p5, 40, 55
+    
+    section 4차시-제작2
+    Skills 섹션 구현       :p6, 55, 65
+    Projects 섹션 구현     :p7, 65, 75
+    Contact 섹션 구현      :p8, 75, 80
+    통합 테스트           :p9, 80, 85
+    배포                  :crit, p10, 85, 90
+```
 
 ---
 
@@ -1538,6 +1980,407 @@ Step 4: 링크 제출
 
 ---
 
+### 📐 프로젝트 2 - 시스템 구조도
+
+#### 1️⃣ 전체 시스템 아키텍처
+
+```mermaid
+graph TB
+    subgraph "프론트엔드 레이어"
+        A[진로 설문 앱]
+        A --> B[시작 화면 컴포넌트]
+        A --> C[질문 화면 컴포넌트]
+        A --> D[결과 화면 컴포넌트]
+        A --> E[네비게이션 컴포넌트]
+    end
+    
+    subgraph "상태 관리 레이어"
+        F[useState Hooks]
+        F --> F1[currentQuestion<br/>현재 질문 번호]
+        F --> F2[answers Array<br/>답변 배열]
+        F --> F3[showResult<br/>결과 표시 상태]
+        F --> F4[resultType<br/>최종 유형]
+    end
+    
+    subgraph "로직 레이어"
+        G[비즈니스 로직]
+        G --> G1[질문 네비게이션<br/>이전/다음]
+        G --> G2[답변 저장 로직]
+        G --> G3[결과 계산 알고리즘<br/>유형별 카운트]
+        G --> G4[진행률 계산]
+    end
+    
+    subgraph "데이터 레이어"
+        H[정적 데이터]
+        H --> H1[질문 데이터<br/>10개 questions]
+        H --> H2[유형 정의<br/>4가지 types]
+        H --> H3[결과 설명<br/>descriptions]
+    end
+    
+    subgraph "저장소 레이어"
+        I[localStorage<br/>선택사항]
+    end
+    
+    B --> F
+    C --> F
+    D --> F
+    
+    C --> G
+    D --> G3
+    
+    C --> H1
+    D --> H2
+    D --> H3
+    
+    G3 --> I
+    
+    style A fill:#8B5CF6,color:#fff
+    style F fill:#3B82F6,color:#fff
+    style G fill:#10B981,color:#fff
+    style H fill:#F59E0B,color:#000
+```
+
+#### 2️⃣ 개발 프로세스 플로우차트
+
+```mermaid
+graph TD
+    Start[프로젝트 2 시작] --> Phase1[5차시: 설계 단계]
+    
+    Phase1 --> P1A[로직 플로우차트 작성]
+    Phase1 --> P1B[질문 데이터 작성<br/>10개]
+    Phase1 --> P1C[유형 정의<br/>4가지]
+    
+    P1A --> Check1{설계 완료?}
+    P1B --> Check1
+    P1C --> Check1
+    
+    Check1 -->|Yes| Phase2[6차시: 구현 Part 1]
+    Check1 -->|No| P1A
+    
+    Phase2 --> P2A[시작 화면 구현]
+    P2A --> P2B[질문 화면 구현<br/>+ 진행률 바]
+    P2B --> P2C[상태 관리 구현<br/>useState]
+    P2C --> P2D[답변 저장 로직]
+    P2D --> P2E[결과 계산 함수]
+    
+    P2E --> Check2{70% 완성?}
+    Check2 -->|Yes| Phase3[7차시: 구현 Part 2]
+    Check2 -->|No| Fix1[디버깅]
+    Fix1 --> P2B
+    
+    Phase3 --> P3A[결과 화면 UI]
+    P3A --> P3B[유형별 데이터 바인딩]
+    P3B --> P3C[그래프 컴포넌트]
+    P3C --> P3D[다시하기 기능]
+    P3D --> P3E[통합 테스트]
+    
+    P3E --> Test1[흐름 테스트]
+    P3E --> Test2[로직 테스트]
+    P3E --> Test3[UI 테스트]
+    
+    Test1 --> Check3{100% 완성?}
+    Test2 --> Check3
+    Test3 --> Check3
+    
+    Check3 -->|Yes| Deploy[배포]
+    Check3 -->|No| Fix2[수정]
+    Fix2 --> P3E
+    
+    Deploy --> End[프로젝트 2 완료]
+    
+    style Start fill:#8B5CF6,color:#fff
+    style Phase1 fill:#3B82F6,color:#fff
+    style Phase2 fill:#3B82F6,color:#fff
+    style Phase3 fill:#3B82F6,color:#fff
+    style End fill:#10B981,color:#fff
+    style Check1 fill:#F59E0B,color:#000
+    style Check2 fill:#F59E0B,color:#000
+    style Check3 fill:#F59E0B,color:#000
+```
+
+#### 3️⃣ 사용자 인터랙션 플로우 (상세)
+
+```mermaid
+graph TD
+    A[사용자 앱 접속] --> B[시작 화면 로드]
+    
+    B --> C[제목, 설명, 시작 버튼 표시]
+    
+    C --> D{시작 버튼 클릭}
+    D -->|Yes| E[질문 1 표시<br/>currentQuestion = 0]
+    D -->|No| C
+    
+    E --> F[진행률 바 표시<br/>10%]
+    F --> G[질문 텍스트 표시]
+    G --> H[4개 선택지 버튼]
+    
+    H --> I{선택지 클릭}
+    I -->|선택| J[답변 저장<br/>answers.push type]
+    
+    J --> K[currentQuestion++]
+    K --> L{currentQuestion < 10?}
+    
+    L -->|Yes| M[다음 질문 표시]
+    L -->|No| N[결과 계산 함수 호출]
+    
+    M --> F
+    
+    N --> O[유형별 카운트<br/>creative: 3<br/>technical: 5<br/>social: 1<br/>analytical: 1]
+    
+    O --> P[최대값 찾기<br/>maxType = technical]
+    
+    P --> Q[resultType 설정<br/>showResult = true]
+    
+    Q --> R[결과 화면 전환]
+    
+    R --> S[유형 헤더 표시<br/>이모지 + 이름]
+    S --> T[유형 설명 카드]
+    T --> U[추천 진로 3개]
+    U --> V[점수 분포 그래프<br/>막대 그래프]
+    
+    V --> W{사용자 액션}
+    
+    W -->|다시하기 클릭| X[상태 초기화<br/>currentQuestion = -1<br/>answers = []]
+    W -->|공유하기 클릭| Y[링크 복사 또는<br/>SNS 공유]
+    
+    X --> B
+    Y --> Z[공유 완료]
+    
+    style A fill:#8B5CF6,color:#fff
+    style E fill:#3B82F6,color:#fff
+    style N fill:#10B981,color:#fff
+    style R fill:#F59E0B,color:#000
+    style D fill:#EF4444,color:#fff
+    style I fill:#EF4444,color:#fff
+    style L fill:#EF4444,color:#fff
+    style W fill:#EF4444,color:#fff
+```
+
+#### 4️⃣ 상태 관리 다이어그램 (State Flow)
+
+```mermaid
+stateDiagram-v2
+    [*] --> 시작화면: 앱 로드
+    
+    시작화면 --> 질문화면: 시작 버튼 클릭<br/>currentQuestion = 0
+    
+    state 질문화면 {
+        [*] --> 질문표시
+        질문표시 --> 선택대기
+        선택대기 --> 답변저장: 선택지 클릭
+        답변저장 --> 다음질문: currentQuestion < 9
+        답변저장 --> 결과계산: currentQuestion === 9
+        다음질문 --> 질문표시: currentQuestion++
+    }
+    
+    질문화면 --> 결과화면: 결과계산 완료<br/>showResult = true
+    
+    state 결과화면 {
+        [*] --> 유형판별: calculateResult()
+        유형판별 --> 데이터로딩: resultType 설정
+        데이터로딩 --> UI렌더링: 유형별 데이터 fetch
+        UI렌더링 --> [*]
+    }
+    
+    결과화면 --> 시작화면: 다시하기<br/>상태 초기화
+    
+    결과화면 --> [*]: 앱 종료
+    
+    note right of 질문화면
+        State:
+        - currentQuestion: 0-9
+        - answers: string[]
+        - 진행률: (current+1)/10*100
+    end note
+    
+    note right of 결과화면
+        State:
+        - resultType: string
+        - showResult: true
+        - counts: object
+    end note
+```
+
+#### 5️⃣ 데이터 흐름도 & 로직 구조
+
+```mermaid
+graph LR
+    subgraph "입력 데이터"
+        A1[질문 데이터<br/>questions array]
+        A2[유형 정의<br/>types object]
+    end
+    
+    subgraph "사용자 입력"
+        B[선택지 클릭<br/>option.type]
+    end
+    
+    subgraph "상태 저장"
+        C[answers 배열<br/>[creative, technical, ...]<br/>최대 10개]
+    end
+    
+    subgraph "계산 로직"
+        D[forEach 순회]
+        D --> D1[counts 객체<br/>creative: count++]
+        D1 --> D2[Object.keys reduce<br/>최대값 찾기]
+    end
+    
+    subgraph "결과 데이터"
+        E[resultType<br/>예: technical]
+    end
+    
+    subgraph "UI 렌더링"
+        F[types resultType<br/>데이터 바인딩]
+        F --> F1[이름, 이모지, 색상]
+        F --> F2[설명 텍스트]
+        F --> F3[추천 진로 배열]
+        F --> F4[점수 그래프]
+    end
+    
+    A1 --> B
+    B --> C
+    C --> D
+    D2 --> E
+    
+    A2 --> F
+    E --> F
+    C --> F4
+    
+    style A1 fill:#3B82F6,color:#fff
+    style B fill:#F59E0B,color:#000
+    style C fill:#8B5CF6,color:#fff
+    style D fill:#10B981,color:#fff
+    style E fill:#EF4444,color:#fff
+    style F fill:#06B6D4,color:#fff
+```
+
+#### 6️⃣ 컴포넌트 구조도
+
+```mermaid
+graph TD
+    subgraph "Survey App"
+        Root[SurveyApp.tsx<br/>메인 앱]
+        
+        Root --> State[useState 상태<br/>currentQuestion<br/>answers<br/>showResult<br/>resultType]
+        
+        Root --> Nav[Navigation<br/>네비게이션]
+        
+        Root --> Render{조건부 렌더링}
+        
+        Render -->|currentQuestion === -1| Start[StartScreen<br/>시작 화면]
+        Render -->|0 <= currentQuestion <= 9| Question[QuestionScreen<br/>질문 화면]
+        Render -->|showResult === true| Result[ResultScreen<br/>결과 화면]
+        
+        Start --> S1[Title<br/>제목]
+        Start --> S2[Description<br/>설명]
+        Start --> S3[StartButton<br/>시작 버튼]
+        
+        Question --> Q1[ProgressBar<br/>진행률 바<br/>width: current+1/10*100%]
+        Question --> Q2[ProgressText<br/>질문 n/10]
+        Question --> Q3[QuestionText<br/>질문 텍스트]
+        Question --> Q4[OptionButtons<br/>선택지 4개]
+        Q4 --> Q5[onClick Handler<br/>답변 저장 + 다음]
+        
+        Question --> Q6[BackButton<br/>이전 버튼<br/>선택사항]
+        
+        Result --> R1[TypeHeader<br/>유형 헤더<br/>배경색 + 이모지]
+        Result --> R2[DescriptionCard<br/>설명 카드]
+        Result --> R3[JobCards<br/>추천 진로 카드 x3]
+        Result --> R4[ScoreGraph<br/>점수 막대 그래프]
+        R4 --> R5[Bar Component x4<br/>각 유형별 막대]
+        Result --> R6[ActionButtons<br/>다시하기 + 공유]
+    end
+    
+    subgraph "데이터"
+        Data1[questions<br/>질문 배열]
+        Data2[types<br/>유형 정의]
+    end
+    
+    Question --> Data1
+    Result --> Data2
+    
+    style Root fill:#8B5CF6,color:#fff
+    style State fill:#3B82F6,color:#fff
+    style Render fill:#F59E0B,color:#000
+    style Start fill:#10B981,color:#fff
+    style Question fill:#10B981,color:#fff
+    style Result fill:#10B981,color:#fff
+    style Data1 fill:#06B6D4,color:#fff
+    style Data2 fill:#06B6D4,color:#fff
+```
+
+#### 7️⃣ 결과 계산 알고리즘 플로우
+
+```mermaid
+flowchart TD
+    A[질문 10 완료] --> B[calculateResult 함수 호출]
+    
+    B --> C[counts 객체 초기화<br/>creative: 0<br/>technical: 0<br/>social: 0<br/>analytical: 0]
+    
+    C --> D[answers.forEach 시작]
+    
+    D --> E{답변 배열 순회}
+    
+    E -->|각 답변| F[type 확인]
+    F --> G[counts type ++]
+    
+    G --> E
+    
+    E -->|순회 완료| H[Object.keys counts]
+    
+    H --> I[reduce 함수로<br/>최대값 찾기]
+    
+    I --> J[maxType 반환]
+    
+    J --> K[resultType = maxType]
+    
+    K --> L[showResult = true]
+    
+    L --> M[결과 화면 렌더링]
+    
+    M --> N{동점 처리}
+    N -->|동점 있음| O[첫 번째 유형 선택]
+    N -->|동점 없음| P[확정 유형]
+    
+    O --> Q[localStorage 저장<br/>선택사항]
+    P --> Q
+    
+    Q --> R[화면 전환 완료]
+    
+    style A fill:#8B5CF6,color:#fff
+    style B fill:#3B82F6,color:#fff
+    style C fill:#10B981,color:#fff
+    style I fill:#F59E0B,color:#000
+    style K fill:#EF4444,color:#fff
+    style R fill:#06B6D4,color:#fff
+```
+
+#### 8️⃣ 차시별 산출물 맵
+
+```mermaid
+gantt
+    title 프로젝트 2 - 차시별 개발 타임라인
+    dateFormat X
+    axisFormat %s
+    
+    section 5차시-설계
+    로직 플로우차트       :done, p1, 0, 8
+    질문 데이터 작성      :done, p2, 8, 20
+    유형 정의서 작성      :done, p3, 20, 25
+    
+    section 6차시-구현1
+    시작 화면 구현        :active, p4, 25, 35
+    질문 화면 구현        :active, p5, 35, 50
+    결과 계산 로직        :active, p6, 50, 55
+    
+    section 7차시-구현2
+    결과 화면 UI          :p7, 55, 75
+    그래프 컴포넌트       :p8, 75, 82
+    통합 테스트           :p9, 82, 90
+    배포                  :crit, p10, 90, 95
+```
+
+---
+
 ## 📅 5차시: 프로젝트 2 - 벤치마킹 & 로직 설계 (PPRIMM)
 
 ### 🎯 학습 목표
@@ -2654,9 +3497,212 @@ ______________________________
 
 ---
 
-**버전**: v4.0 (PPRIMM 방식)  
+---
+
+## 📐 다이어그램 활용 가이드 (교사용)
+
+### 💡 각 다이어그램의 교육적 활용
+
+#### 1️⃣ 시스템 아키텍처 다이어그램
+**활용 시점**: 프로젝트 시작 전 (Present 단계)  
+**목적**: 전체 구조 이해  
+**교수 방법**:
+- 화면에 크게 띄워 설명
+- 레이어별로 역할 설명 (프론트엔드, 데이터, 스타일링)
+- "여러분이 만들 앱은 이렇게 구성됩니다" 강조
+
+```
+활용 예시:
+"이 다이어그램을 보세요. 위쪽 파란색 부분이 여러분이 보는 화면,
+가운데 초록색이 데이터, 아래쪽이 스타일입니다."
+```
+
+#### 2️⃣ 개발 프로세스 플로우차트
+**활용 시점**: 매 차시 시작 (Prepare/Present 단계)  
+**목적**: 현재 위치와 다음 단계 파악  
+**교수 방법**:
+- "우리는 지금 여기에 있습니다" 표시
+- 남은 단계 미리보기
+- 체크포인트 강조
+
+```
+활용 예시:
+"오늘은 이 파란색 박스, Hero 섹션을 만듭니다.
+다음 시간에는 About 섹션으로 넘어갑니다."
+```
+
+#### 3️⃣ 사용자 인터랙션 플로우
+**활용 시점**: 기획 단계 (2차시, 5차시)  
+**목적**: 사용자 관점 이해  
+**교수 방법**:
+- 학생에게 "사용자가 뭘 할까요?" 질문
+- 플로우 따라가며 시나리오 설명
+- 선택 분기점 강조 (다이아몬드 노드)
+
+```
+활용 예시:
+"사용자가 버튼을 누르면? → 질문이 나옵니다.
+선택지를 누르면? → 답변이 저장되고 다음 질문으로"
+```
+
+#### 4️⃣ 컴포넌트 구조도
+**활용 시점**: 제작 중 (3-4차시, 6-7차시)  
+**목적**: 코드 구조 이해  
+**교수 방법**:
+- "이 앱은 여러 조각으로 나뉩니다" 설명
+- 각 컴포넌트의 역할 명확화
+- 부모-자식 관계 강조
+
+```
+활용 예시:
+"HeroSection 안에 ProfileImage, IntroText가 들어있죠?
+레고 블록처럼 조립하는 겁니다."
+```
+
+#### 5️⃣ 데이터 흐름도
+**활용 시점**: 로직 구현 전 (5차시, 6차시)  
+**목적**: 데이터 처리 과정 이해  
+**교수 방법**:
+- 왼쪽(입력) → 오른쪽(출력) 흐름 추적
+- 각 단계에서 데이터 변화 설명
+- 변수명과 연결
+
+```
+활용 예시:
+"선택지를 클릭하면 → answers 배열에 저장 →
+계산 함수로 이동 → resultType 결정"
+```
+
+#### 6️⃣ 상태 관리 다이어그램 (프로젝트 2)
+**활용 시점**: useState 설명 시 (6차시)  
+**목적**: 상태 변화 이해  
+**교수 방법**:
+- 각 상태(State)를 원으로 표현
+- 화살표는 "어떻게 바뀌는지"
+- 실제 변수명 연결
+
+```
+활용 예시:
+"currentQuestion이 -1이면 시작화면,
+0-9면 질문화면, showResult가 true면 결과화면"
+```
+
+#### 7️⃣ 알고리즘 플로우 (결과 계산)
+**활용 시점**: 로직 구현 중 (6차시)  
+**목적**: 계산 과정 단계별 이해  
+**교수 방법**:
+- 위에서 아래로 순차 실행 강조
+- 예제 데이터로 실제 계산 시연
+- 각 단계의 코드 연결
+
+```
+활용 예시:
+"answers가 [creative, creative, technical]이면
+counts는 creative: 2, technical: 1이 되고,
+maxType은 creative가 됩니다"
+```
+
+#### 8️⃣ Gantt 차트 (타임라인)
+**활용 시점**: 진도 관리 (매 차시 종료 시)  
+**목적**: 진척도 시각화  
+**교수 방법**:
+- "우리가 어디까지 왔나" 확인
+- 다음 마일스톤 강조
+- 지연 학생 개별 지도
+
+```
+활용 예시:
+"초록색은 완료, 노란색이 오늘 할 것,
+회색은 앞으로 할 것입니다"
+```
+
+---
+
+### 🎓 학생 학습 활용법
+
+#### 학생들이 다이어그램을 보는 방법
+
+**1. 프로젝트 시작 전**
+```
+✅ 전체 구조도 보기 → "아, 이렇게 생긴 거구나"
+✅ 개발 프로세스 확인 → "3단계를 거쳐 완성하는구나"
+✅ 사용자 플로우 이해 → "사용자는 이렇게 움직이는구나"
+```
+
+**2. 제작 중**
+```
+✅ 컴포넌트 구조 참고 → "내가 지금 이 부분을 만들고 있구나"
+✅ 데이터 흐름 확인 → "이 데이터가 어떻게 처리되는지 알겠어"
+✅ 알고리즘 이해 → "이 순서대로 계산되는구나"
+```
+
+**3. 막혔을 때**
+```
+✅ 플로우차트 다시 보기 → "어느 단계에서 막혔지?"
+✅ 컴포넌트 구조 확인 → "빠진 부분이 있나?"
+✅ 교사에게 질문 → "이 부분이 이해 안 돼요" (다이어그램 가리키며)
+```
+
+---
+
+### 📋 교사 체크리스트 (다이어그램 활용)
+
+#### 수업 준비 단계
+```
+□ 해당 차시 관련 다이어그램 선택 (1-2개)
+□ 큰 화면에 표시할 준비
+□ 주요 노드/화살표에 형광펜 표시
+□ 학생 워크시트에 간단 버전 포함
+```
+
+#### 수업 중 활용
+```
+□ Present 단계에서 전체 구조 보여주기
+□ Make 단계에서 현재 위치 표시
+□ 질문 받을 때 다이어그램으로 설명
+□ 체크포인트에서 진행 상황 표시
+```
+
+#### 수업 후 활용
+```
+□ 완성한 학생: 다음 단계 다이어그램 보여주기
+□ 지연 학생: 해당 부분 다이어그램 다시 설명
+□ 전체 피드백: 타임라인 차트로 진도 공유
+```
+
+---
+
+## 🎯 다이어그램 목차 (빠른 참조)
+
+### 프로젝트 1 관련
+- 📐 시스템 아키텍처: [47줄](#1️⃣-전체-시스템-아키텍처)
+- 🔄 개발 프로세스: [97줄](#2️⃣-개발-프로세스-플로우차트)
+- 👤 사용자 플로우: [144줄](#3️⃣-사용자-인터랙션-플로우-상세)
+- 🧩 컴포넌트 구조: [193줄](#4️⃣-컴포넌트-구조도)
+- 📊 데이터 흐름: [239줄](#5️⃣-데이터-흐름도)
+- 📅 타임라인: [286줄](#6️⃣-차시별-산출물-맵)
+
+### 프로젝트 2 관련
+- 📐 시스템 아키텍처: [1730줄](#1️⃣-전체-시스템-아키텍처-1)
+- 🔄 개발 프로세스: [1787줄](#2️⃣-개발-프로세스-플로우차트-1)
+- 👤 사용자 플로우: [1842줄](#3️⃣-사용자-인터랙션-플로우-상세-1)
+- 🎛️ 상태 관리: [1900줄](#4️⃣-상태-관리-다이어그램-state-flow)
+- 📊 데이터 흐름: [1943줄](#5️⃣-데이터-흐름도--로직-구조)
+- 🧩 컴포넌트 구조: [1995줄](#6️⃣-컴포넌트-구조도-1)
+- 🧮 알고리즘: [2047줄](#7️⃣-결과-계산-알고리즘-플로우)
+- 📅 타임라인: [2093줄](#8️⃣-차시별-산출물-맵-1)
+
+### 전체 커리큘럼
+- 🎯 8차시 전체 구조: [23줄](#🎯-8차시-전체-구조도)
+- 🔄 프로젝트 비교: [94줄](#🔄-프로젝트별-개발-사이클-비교)
+- 🛠️ 기술 스택: [122줄](#🛠️-도구-및-기술-스택-맵)
+- 📈 학습 곡선: [165줄](#📈-학습-성장-곡선)
+
+---
+
+**버전**: v4.1 (다이어그램 통합)  
 **작성일**: 2025년 11월  
-**최종 업데이트**: 프로젝트 1, 2 완료  
+**최종 업데이트**: 프로젝트 1, 2 완료 + Mermaid 다이어그램 추가  
 
 **핵심 성과**:
 - ✅ PPRIMM 교수법 전면 적용
@@ -2665,6 +3711,16 @@ ______________________________
 - ✅ 결과물 먼저 제시로 목표 명확화
 - ✅ 체크포인트로 진도 관리 용이
 - ✅ 20명 학급에서 실행 가능한 구조
+- ✅ **Mermaid 다이어그램 18개 추가** (NEW)
+- ✅ **시각화된 개발 프로세스** (NEW)
+- ✅ **프로젝트별 구조도 완비** (NEW)
+
+**문서 구성**:
+- 전체 커리큘럼 통합 플로우차트 4개
+- 프로젝트 1 상세 다이어그램 6개
+- 프로젝트 2 상세 다이어그램 8개
+- 총 18개 Mermaid 다이어그램
+- 교사 활용 가이드 포함
 
 **8차시 갤러리 워크는 v3 파일 참고**
 
